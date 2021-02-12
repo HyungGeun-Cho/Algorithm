@@ -1,24 +1,18 @@
 #include <stdio.h>
 int main()
 {
-	int n, i;
+	int n, a, b, i;
 	scanf("%d", &n);
 	
-	int a[n]={}, b[n]={};
-	
 	
 	
 	for(i=1; i<=n; i++)
 	{
-		scanf("%d %d", a[i], b[i]);
-
+		scanf("%d %d\n", &a, &b);
+		
+		printf("%d\n", a+b);		
+		
 	}
-
-	for(i=1; i<=n; i++)
-	{
-		printf("%d", a[i]+b[i]);
-
-	}
-
+	
 	return 0;
 }
