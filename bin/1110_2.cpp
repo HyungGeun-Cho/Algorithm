@@ -18,7 +18,7 @@ int main()
 		
 		cnt++;
 		
-		printf("%d + %d\nans : %d cnt : %d\n", temp1, temp2, ans, cnt);
+		//printf("%d + %d\nans : %d cnt : %d\n", temp1, temp2, ans, cnt);
 		
 		
 	}while(ans!=n);
