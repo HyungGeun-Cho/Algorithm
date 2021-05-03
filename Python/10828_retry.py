@@ -1,4 +1,5 @@
-# STACK - C
+# STACK - Python
+import sys
 
 
 class Stack:
@@ -6,14 +7,13 @@ class Stack:
     def __init__(self):
         self.array=[]
         self.top=-1
-        self.max=10000
         
         
     def IsEmpty(self):
         if(self.top<0):
-            return True
+            print(1)
         else:
-            return False
+            print(0)
         
     # def IsFull(self):
     #     if(self.top>=self.max-1):
@@ -22,24 +22,26 @@ class Stack:
     #         return False
 
     def push(self, item):
-        print(self.top)
-        self.top=self.top+1
-        print(self.top)
-        self.array[self.top]=item
+        self.array.append(item)
+        self.top+=1
         
         
     
     def pop(self):
-        if not self.IsEmpty():
+        if self.top!=-1:
             print(self.array[self.top])
+            del self.array[self.top]
             self.top=self.top-1
+        
+        else:
+            print(-1)
     
     def size(self):
         print(self.top+1)
         
     def printtop(self):
         if(self.top==-1):
-            print("-1")
+            print(-1)
         
         else:
             print(self.array[self.top])
@@ -49,9 +51,7 @@ s=Stack()
 n=int(input())
 
 for i in range(n):
-    temp=input().split(' ')
-    
-    print(temp)
+    temp=sys.stdin.readline().strip().split(' ')
     
     if temp[0]=='push':
         s.push(int(temp[1]))
